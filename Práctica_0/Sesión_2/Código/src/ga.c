@@ -70,9 +70,11 @@ double aplicar_ga(const double *d, int n, int n_gen, int tam_pob, int *sol, doub
 {
 	int i, g, mutation_start;
 
+	/*
 	double fitness_anterior = -1.0;
 	double threshold = 0.1;
 	double improvement = 100.0;
+	*/
 	
 	// crea poblacion inicial (array de individuos)
 	Individuo **poblacion = (Individuo **) malloc(tam_pob * sizeof(Individuo *));
@@ -119,6 +121,7 @@ double aplicar_ga(const double *d, int n, int n_gen, int tam_pob, int *sol, doub
 			printf("Generacion %d - ", g);
 			printf("Fitness = %.0lf\n", (poblacion[0]->fitness));
 		}
+		/*
 		// Verificar si el fitness actual es al menos un N% mejor que el anterior
 		improvement = ((fitness_anterior - poblacion[0]->fitness) / fitness_anterior) * 100.0;
 
@@ -129,6 +132,7 @@ double aplicar_ga(const double *d, int n, int n_gen, int tam_pob, int *sol, doub
         }
 
         fitness_anterior = poblacion[0]->fitness;
+		*/
 
 	}
 	
